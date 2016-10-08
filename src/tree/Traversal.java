@@ -6,6 +6,10 @@ import java.util.List;
 
 class Node{
 	
+	public Node(){
+		
+	}
+	
 	public Node(String value){
 		this.value = value;
 	}
