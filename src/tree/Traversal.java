@@ -4,20 +4,7 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 
-class Node{
-	
-	public Node(){
-		
-	}
-	
-	public Node(String value){
-		this.value = value;
-	}
-	
-	String value;
-	Node left;
-	Node right;
-}
+
 
 public class Traversal {
 	
