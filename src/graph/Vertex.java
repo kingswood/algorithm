@@ -7,6 +7,8 @@ public class Vertex<T> {
 	
 	T value;
 	
+	int shortestPath = Integer.MAX_VALUE;
+	
 	List<Edge> edges;
 	
 	boolean isVisited;
@@ -39,6 +41,41 @@ public class Vertex<T> {
 		this.isVisited = isVisited;
 	}
 	
+	
+	
+	public int getShortestPath() {
+		return shortestPath;
+	}
+
+	public void setShortestPath(int shortestPath) {
+		this.shortestPath = shortestPath;
+	}
+	
+	public int toVertex(Vertex<?> v){
+		int path = Integer.MAX_VALUE;
+		
+		if(null == this.getEdges() || this.getEdges().size() == 0){
+			return path;
+		}
+		
+		if(this.getValue().equals(v.getValue())){
+			return 0;//same vertex
+		}
+		
+		List<Edge> edges = this.getEdges();
+		
+		for(int i = 0;i<edges.size();i++){
+			Edge e = edges.get(i);
+			
+			if(e.getEndPoint().getValue().equals(v.getValue())){
+				return e.getWeight();
+			}
+					
+		}
+		
+		return path;
+	}
+
 	public void addEdge(Vertex<?> endPoint){
 		
 		Edge edge = new Edge();
