@@ -95,9 +95,9 @@ public class ShortestPathDijkstra {
 						next.shortestPath = 0;
 					}
 					if(v.shortestPath > v.toVertex(next)){
-						next.shortestPath = next.shortestPath + v.toVertex(next);
+						next.shortestPath = v.toVertex(next) + v.toVertex(next);
 					}else{
-						next.shortestPath = next.shortestPath + v.shortestPath;
+						next.shortestPath = v.toVertex(next) + v.shortestPath;
 					}
 					
 					if(next.getShortestPath() < tmp){
