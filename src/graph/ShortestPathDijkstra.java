@@ -88,22 +88,22 @@ public class ShortestPathDijkstra {
 			
 			for(int j = i; j<list.size();j++){
 				Vertex<?> next = list.get(j);
-				int tmp = Integer.MAX_VALUE;
+				
 				if(v.toVertex(next) < Integer.MAX_VALUE){
-					// connected
 					if(next.shortestPath == Integer.MAX_VALUE){
-						next.shortestPath = 0;
-					}
-					if(v.shortestPath > v.toVertex(next)){
-						next.shortestPath = v.toVertex(next) + v.toVertex(next);
+						if(v.shortestPath == Integer.MAX_VALUE){
+							next.shortestPath = v.toVertex(next);
+						}else{
+							next.shortestPath = v.shortestPath + v.toVertex(next);
+						}
+						
 					}else{
-						next.shortestPath = v.toVertex(next) + v.shortestPath;
-					}
-					
-					if(next.getShortestPath() < tmp){
-						tmp = next.getShortestPath();
+						if(v.shortestPath + v.toVertex(next) < next.shortestPath){
+							next.shortestPath = v.shortestPath + v.toVertex(next);
+						}
 					}
 				}
+				
 			}
 			
 			result.add(String.valueOf(v.getValue())+v.getShortestPath());
