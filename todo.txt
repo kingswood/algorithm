@@ -1,0 +1,26 @@
+Check to see if a binary tree was mirrored
+
+ Write a function, which takes input, two sets of integers, and moves a integer from 
+ one set to another set in a way that average of both sets increases. It returns true 
+ if it successfully moved a element, false otherwise.   
+ 
+How to build a distributed hash.
+
+determining whether an array has duplicate
+
+Implement an insert method for a sorted circular linked list
+
+what is the binary tree and balance binary tree as well as linked list, cyclic linked list
+
+And how to find loop in a linked list
+
+Given a string contain braces, ex String = "{{{}{}}{" return true or false depending if its a valid set/format meaning if there was code between the braces would it compile fine
+
+Given 2 strings, determine if one is a rotation or roll of the other. Ex ( it returns true if the parameters are "HELLO" and "LLOHE"
+
+Given an int, return the amount of '1' in the binary representation of it. Ex (17 -> 1001 => 2)   
+ 
+ 
+ Behaver questions
+ 
+ Tell me about a trade off you made in your previous projects
