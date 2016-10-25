@@ -4,26 +4,40 @@ import java.util.Scanner;
 
 public class SaveThePrisoner {
 	
-	public static int getLastPrisoner(int n, int m, int s){
-		
-		int lastPosition = 0;
-		
-		if((s + m - 1) <= n){
-			lastPosition = s + m -1;
-		}
-		
-		return lastPosition;
-	}
+	 public static int savePrisoner(int prisonerCount, int sweetCount, int startPosition)
+     {
+         int position = -1;
+
+         int m = sweetCount%prisonerCount;
+         if ((startPosition + m) - 1 > prisonerCount)
+         {
+             position = (startPosition + m - 1) - prisonerCount;
+             
+         }
+         else
+         {
+             position = startPosition + m - 1;
+         }
+
+         return position;
+     }
 
 	public static void main(String[] args){
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		int prisonerCount = scanner.nextInt();
+		int n = scanner.nextInt();
 		
-		int sweetCount = scanner.nextInt();
-		
-		int startPosition = scanner.nextInt();
+		for(int i = 0;i<n;i++){
+			
+			int prisonerCount = scanner.nextInt();
+			
+			int sweetCount = scanner.nextInt();
+			
+			int startPosition = scanner.nextInt();
+			
+			System.out.println(savePrisoner(prisonerCount, sweetCount, startPosition));
+		}
 		
 		
 	}

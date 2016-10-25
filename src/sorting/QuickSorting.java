@@ -11,7 +11,7 @@ public class QuickSorting {
 		int x = original[l];
 		int position = l;
 		while(j > i){
-			System.out.println("j: " + j + " i: " + i);
+			
 			while(j>i&& original[j] >= x){
 				--j;
 			}
