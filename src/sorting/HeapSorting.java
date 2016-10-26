@@ -32,7 +32,8 @@ public class HeapSorting {
         if (array == null || array.length <= 1) {  
             return;  
         }  
-
+        
+        
         int half = array.length / 2;  
         for (int i = half; i >= 0; i--) {  
             maxHeap(array, array.length, i);  
